@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Photo Album</title>
+    <link rel="stylesheet" href="sheets.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script type="text/html" id ="albumButtons">
+      <button type="button" name="button"><%=albumName%></button>
+    </script>
+    <script type="text/html" id ="albumDivs">
+      <div class = "albumDiv" id = <%= albumName%>>
+        <p><%= albumName%></p>
+      </div>
+    </script>
+    <script type="text/html" id ="photoImages">
+      <div class = "photoDiv">
+        <img src=<%= uniquePhoto%> alt="" />
+      </div>
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside>
+      </aside>
+      <section>
+
+      </section>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"> </script>
+    <script src="picture_links.js"></script>
+    <script src="app.js"> </script>
+  </body>
+</html>
