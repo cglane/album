@@ -5,7 +5,8 @@ body, .wrapper {
 aside {
   width: 20%;
   vertical-align: top;
-  margin-top: 70px; }
+  margin-top: 70px;
+  display: none; }
   aside button {
     width: 80%;
     margin-bottom: 20px; }
@@ -14,14 +15,23 @@ section {
   width: 70%;
   margin-top: 70px; }
   section .albumDiv {
+    z-index: 0;
     width: 30%;
     display: inline-block;
     font-size: 3em;
     background-color: #eee;
     border: 1px solid black; }
   section .photoDiv {
-    display: none; }
+    width: 30%;
+    margin: 5%;
+    display: inline-block; }
+    section .photoDiv img {
+      width: 100%; }
 
 .wrapper > * {
   display: inline-block;
   height: 800px; }
+
+.specialFullScreen {
+  width: 50000px;
+  z-index: 1; }

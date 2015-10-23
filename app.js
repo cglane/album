@@ -1,6 +1,7 @@
 var uniquePhoto;
 var albumCount = 0;
 var albumName;
+var albumNameDiv;
 $(document).ready(function(){
   var numAlbums = 0;
   var photoImages = _.template($('#photoImages').html());
@@ -13,12 +14,18 @@ $(document).ready(function(){
       _.each(item,function(el){
         albumCount ++;
         albumName = "album" + albumCount;
-        console.log(albumName);
         $('section').append(albumDivs(albumName));
         $('aside').append(albumButtons(albumName));
         _.each(el,function(thirdelement){
             uniquePhoto = thirdelement;
-            $('section').append(photoImages(uniquePhoto));
+            albumNameDiv = "#" + albumName;
+            $(albumNameDiv).append(photoImages(uniquePhoto));
+        });
+        $('aside button').on('click',function(event){
+          event.preventDefault();
+          var clickedSelection = "#" + $(this).attr('rel');
+          console.log(clickedSelection);
+          $(clickedSelection).addClass('specialFullScreen');
         });
 
       });

@@ -11,19 +11,27 @@ aside{
     width: 80%;
     margin-bottom: 20px;
   }
+  display: none;
 }
 section{
   width: 70%;
   margin-top: 70px;
   .albumDiv{
+    z-index: 0;
     width: 30%;
     display: inline-block;
     font-size: 3em;
     background-color: #eee;
     border: 1px solid black;
+
   }
   .photoDiv{
-    display: none;
+    width: 30%;
+    margin: 5%;
+    display: inline-block;
+    img{
+      width: 100%;
+    }
   }
 
   }
@@ -31,4 +39,8 @@ section{
 .wrapper > *{
   display: inline-block;
   height: 800px;
+}
+.specialFullScreen{
+  width: 50000px;
+  z-index: 1;
 }
