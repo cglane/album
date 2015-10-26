@@ -25,9 +25,27 @@ $(document).ready(function(){
           event.preventDefault();
           var clickedSelection = "#" + $(this).attr('rel');
           console.log(clickedSelection);
-          $(clickedSelection).addClass('specialFullScreen');
-        });
+          var siblings = $('clickedSelection').siblings('section');
+          var children = $('section').children();
+          console.log(siblings);
+          $(clickedSelection).children().css({"display":"block", "width":"100%"});
+          $(clickedSelection).css({"display":"block  ", "width":"100%"});
+          $(clickedSelection).siblings().css({"display":"none  ", "width":"100%"});
 
+        });
+        $('section .albumDiv').on('click',function(event){
+          var clickedSelection = "#" + $(this).attr('rel');
+          var siblings = $(this).siblings();
+          console.log(siblings);
+          console.log(clickedSelection);
+          event.preventDefault();
+          $('aside button').css({"display":"block"});
+          $(siblings).css({"display":"none"});
+          $(clickedSelection).css({"width":"800px"});
+          $(clickedSelection).children().css({"display":"inline-block","width": "30%"});
+          $(clickedSelection).children().children().css({"width":"40%","display":"inline-block"});
+
+      });
       });
   });
 

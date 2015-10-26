@@ -3,6 +3,11 @@ body, .wrapper {
   width: 100%;
   margin: 0;
 }
+
+.wrapper > *{
+  display: inline-block;
+  height: 800px;
+}
 aside{
   width: 20%;
   vertical-align: top;
@@ -10,12 +15,18 @@ aside{
   button{
     width: 80%;
     margin-bottom: 20px;
+    display: none;
   }
-  display: none;
+
 }
 section{
   width: 70%;
-  margin-top: 70px;
+  h1{
+    width: 50%;
+    font-size: 3em;
+    margin: auto;
+    margin-bottom: 70px;
+  }
   .albumDiv{
     z-index: 0;
     width: 30%;
@@ -28,19 +39,10 @@ section{
   .photoDiv{
     width: 30%;
     margin: 5%;
-    display: inline-block;
+    display: none;
     img{
       width: 100%;
     }
   }
 
   }
-
-.wrapper > *{
-  display: inline-block;
-  height: 800px;
-}
-.specialFullScreen{
-  width: 50000px;
-  z-index: 1;
-}

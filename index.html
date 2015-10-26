@@ -9,7 +9,7 @@
       <button type="button" class = "albums" rel=<%= albumName%>><%=albumName%></button>
     </script>
     <script type="text/html" id ="albumDivs">
-      <div class = "albumDiv" id = <%= albumName%>>
+      <div class = "albumDiv" id = <%= albumName%> rel = <%= albumName%> >
         <p><%= albumName%></p>
       </div>
     </script>
@@ -21,10 +21,11 @@
   </head>
   <body>
     <div class="wrapper">
+
       <aside>
       </aside>
       <section>
-
+      <h1> My Albums</h1>
       </section>
     </div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
